@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="index.js" type="text/javascript"></script>
+</head>
+<style>
+    #container {
+        background-color: white;
+        height: 126px;
+        width: 126px;
+    }
+    div{
+        text-align: center;
+        width: 40px;
+        height: 40px;
+        border: 1px solid grey;
+        display: inline-block;
+        display: inline-block;
+        float: left
+    }
+</style>
+<body>
+<p id="message"></p>
+<div id="container"></div>
+<script>
+    $(document).ready(function() {
+        for(var x = 0; x < 3; x++) {
+            for(var y = 0; y < 3; y++) {
+                var unit = $("<div/>",{onclick: "tictactoe(this)",id: "I"+x+y});
+                unit.appendTo('#container');
+            }
+        }
+    });
+</script>
+</body>
+</html>

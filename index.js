@@ -1,10 +1,9 @@
 /**
- * Created by madhan on 8/8/17.
+ * Created by nivethida on 8/8/17.
  */
-var turns = "X";
+var turns = "O";
 var result = false;
-var I11xArray = [];
-var I11oArray = [];
+
 
 
 function tictactoe(cells) {
@@ -41,9 +40,26 @@ else {
 
     if( (a00 == 'X' && a01 == 'X' && a02 == 'X') ||
         (a10 == 'X' && a11 == 'X' && a12 == 'X') ||
-        (a20 == 'X' && a21 == 'X' && a22 == 'X')  ||
-        (a00 == 'X' &&  a10 == 'X' && a20 == 'X') )
+        (a20 == 'X' && a21 == 'X' && a22 == 'X') ||
+        (a00 == 'X' && a10 == 'X' && a20 == 'X') ||
+        (a01 == 'X' && a11 == 'X' && a21 == 'X') ||
+        (a02 == 'X' && a12 == 'X' && a22 == 'X') ||
+        (a00 == 'X' && a11 == 'X' && a22 == 'X') ||
+        (a02 == 'X' && a11 == 'X' && a20 == 'X')
+    )
     {
         document.getElementById("message").innerHTML = "X has won";
+    }
+    else if((a00 == 'O' && a01 == 'O' && a02 == 'O') ||
+         (a10 == 'O' && a11 == 'O' && a12 == 'O') ||
+         (a20 == 'O' && a21 == 'O' && a22 == 'O') ||
+         (a00 == 'O' && a10 == 'O' && a20 == 'O') ||
+         (a01 == 'O' && a11 == 'O' && a21 == 'O') ||
+         (a02 == 'O' && a12 == 'O' && a22 == 'O') ||
+         (a00 == 'O' && a11 == 'O' && a22 == 'O') ||
+         (a02 == 'O' && a11 == 'O' && a20 == 'O')
+    ) {
+        document.getElementById("message").innerHTML = "O has won";
+
     }
  }
